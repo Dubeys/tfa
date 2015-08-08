@@ -194,6 +194,21 @@ nav
 				letter-spacing: .2em
 				+transition(.3s, ease-out, 0s)
 
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//------------------------------------------------------------------------------------------------MAIN CONTENT
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+
+button
+	padding: 0 20px 0 20px
+	height: 40px
+	border-radius: 5px
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3)
+	font-size: 10pt
+	letter-spacing: .1em
+	font-weight: 400
+	border: none
+
 main
 
 	section
@@ -403,32 +418,32 @@ main
 				top: -75px
 				right: 0
 
-			a
-				width: 50px
-				height: 50px
-				background: $text_color
-				display: inline-block
-				text-align: center
-				line-height: 50px
-				text-decoration: none
-				margin-right: 10px
-				box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3)
-				border-radius: 3px
-				overflow: hidden
-				+transition(.2s, ease-in, 0s)
-
-				img
-					margin-top: 10px
-					width: 60%
+				a
+					width: 50px
+					height: 50px
+					background: $text_color
+					display: inline-block
+					text-align: center
+					line-height: 50px
+					text-decoration: none
+					margin-right: 10px
+					box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3)
+					border-radius: 3px
+					overflow: hidden
 					+transition(.2s, ease-in, 0s)
 
-			a:last-child
-				margin-right: 0
+					img
+						margin-top: 10px
+						width: 60%
+						+transition(.2s, ease-in, 0s)
 
-			a:hover
-				+scale(1.05)
-				box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4)
-				+transition(.2s, ease-in, 0s)
+				a:last-child
+					margin-right: 0
+
+				a:hover
+					+scale(1.05)
+					box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4)
+					+transition(.2s, ease-in, 0s)
 
 			button
 				position: static
@@ -447,30 +462,24 @@ div.bgrnd
 	z-index: -1
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
 
-
-
-button
+button.floating
 	position: fixed
 	top: 5%
-	width: 180px
-	height: 40px
-	box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3)
-	border-radius: 3px
 	background: $text_color2
 	color: $text_color
-	border: none
-	font-size: 10pt
-	letter-spacing: .1em
-	font-weight: 400
 	right: 20%
 	opacity: .5
 	+translateX(50%)
 	+transition(.2s, ease-in, 0s)
 
-button:hover
+button.floating:hover
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4)
 	opacity: 1
 	+transition(.2s, ease-in, 0s)
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//------------------------------------------------------------------------------------------------MAIN CONTENT
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
 
 
 @media screen and (max-width: 720px)
@@ -487,3 +496,9 @@ button:hover
 
 	main section.mywork ul li a p.time
 		display: none
+
+@media screen and (max-width: 380px)
+
+	nav	ul li
+		display: block
+		width: 100%
