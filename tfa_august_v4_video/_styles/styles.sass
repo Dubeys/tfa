@@ -1,0 +1,516 @@
+$text_color: #572539
+$text_color2: white
+
+=transform($option)
+	-webkit-transform: $option
+	-moz-transform: $option
+	-o-transform: $option
+	-ms-transform: $option
+	transform: $option
+
+=translateX($pixels)
+	+transform(translateX($pixels))
+
+=translateY($pixels)
+	+transform(translateY($pixels))
+
+=translateXaY($pixels,$pixels2)
+	-webkit-transform: translateX($pixels) translateY($pixels2)
+	-moz-transform: translateX($pixels) translateY($pixels2)
+	-o-transform: translateX($pixels) translateY($pixels2)
+	-ms-transform: translateX($pixels) translateY($pixels2)
+	transform: translateX($pixels) translateY($pixels2)
+
+=rotateZ($deg)
+	+transform(rotateZ($deg))
+
+=scale($amount)
+	+transform(scale($amount))
+
+=transition($duration,$ease,$delay)
+	-webkit-transition: $duration $ease $delay
+	-moz-transition: $duration $ease $delay
+	-o-transition: $duration $ease $delay
+	-ms-transition: $duration $ease $delay
+	transition: $duration $ease $delay
+
+=giant_title()
+	font-size: 3rem
+	font-weight: 200
+
+=gradient($color1,$color2)
+	background: $color1
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2))
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 100%)
+	background: -o-linear-gradient(top, $color1 0%,$color2 100%)
+	background: -ms-linear-gradient(top, $color1 0%,$color2 100%)
+	background: linear-gradient(to bottom, $color1 0%,$color2 100%)
+
+html
+	font-family: 'Raleway', sans-serif
+	height: 100%
+
+body
+	background: black
+	height: 100%
+	padding-top: 0
+
+header
+	height: 100%
+	width: 100%
+	margin-top: 0
+
+	z-index: 2
+
+	div#background
+		background: url(../_images/back_1.jpg)
+		background-position: 50% 50%
+		background-size: cover
+		height: 100%
+		width: 100%
+		margin-top: 0
+		position: fixed
+
+		z-index: -2
+
+		video
+			min-height: 100%
+			max-height: 200%
+			min-width: 100%
+			position: fixed
+			top: 0
+			left: 35%
+			+translateX(-35%)
+
+	div#filter
+		position: fixed
+		top: 0
+		opacity: 1
+		background: $text_color2
+		width: 100%
+		height: 100%
+		z-index: 1950
+		+transition(1s, ease-in-out,0s)
+
+	section.header
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: -2
+		+translateXaY(-50%,-50%)
+		text-align: center
+
+		h1
+			margin: 0
+			color: $text_color2
+			font-weight: 600
+			letter-spacing: 0em
+			text-shadow: 0 0 10px rgba(0,0,0,.5)
+			font-size: 28pt
+
+			span
+				font-weight: 300
+				color: rgba(255,255,255,.8)
+
+		h2
+			margin: 20px 0px 0px 0px
+			letter-spacing: .1em
+			color: $text_color2
+			font-weight: 600
+			font-size: 12pt
+			text-shadow: 0 0 10px rgba(0,0,0,.5)
+			text-transform: uppercase
+
+	section.intro
+		position: fixed
+		top: 50%
+		left: 50%
+		height: 100px
+		width: 200px
+		box-shadow: 0 0 0 0 black
+		+translateXaY(-50%,-50%)
+		z-index: 2000
+
+		img
+			position: fixed
+			z-index: 2000
+
+		img#logo_1
+			right: 150px
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
+			opacity: 1
+			+transition(.5s, ease-out, 0s)
+
+		img#logo_2
+			left: 150px
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
+			opacity: 1
+			+transition(.5s, ease-out, 0s)
+
+nav
+	width: 90%
+	max-width: 1080px
+	background: $text_color
+	position: absolute
+	bottom: 0
+	left: 50%
+	+translateX(-50%)
+	z-index: 0
+
+	ul
+		list-style: none
+		width: 80%
+		margin: 0 auto
+
+		li
+			display: inline-block
+			width: 32%
+			height: 100px
+			line-height: 100px
+
+			a
+				text-align: center
+				display: block
+				height: 100%
+				width: 100%
+				text-decoration: none
+				color: $text_color2
+				font-weight: 400
+				letter-spacing: .1em
+				font-size: 10pt
+				opacity: .5
+				+transition(.2s, ease-in, 0s)
+
+			a:hover
+				opacity: 1
+				letter-spacing: .2em
+				+transition(.3s, ease-out, 0s)
+
+main
+	width: 90%
+	max-width: 1080px
+	margin: 0 auto
+	z-index: 0
+	height: 100%
+
+	section.aboutme
+		height: 70%
+		
+		div#aboutbgrnd
+			background: url(../_images/back_1.jpg) center center
+			background-size: cover
+
+		div.fullscreen
+			div#abouttext 
+				width: 50%
+				background: white
+				padding-top: 50px
+				box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+
+				h1
+					margin: 0 0 0 10%
+					text-transform: uppercase
+					font-size: 16pt
+					color: $text_color
+					letter-spacing: .15em
+
+				h2
+					margin: 10px 0 0 10%
+					font-size: 10pt
+					color: #333333
+					letter-spacing: .15em
+					font-weight: 600
+					opacity: .8
+
+				p
+					width: 80% 
+					margin: 50px 0 0 10%
+					line-height: 180%
+					font-size: 10pt
+					font-weight: 600
+					color: #333333
+					padding-bottom: 50px
+
+					a
+						text-decoration: none
+						color: $text_color
+						font-size: 10pt
+						font-weight: 800
+						letter-spacing: 0.05em
+						+transition(.2s, ease-in, 0s)
+						width: 50px
+						display: inline-block
+						text-align: center
+
+					a:hover
+						letter-spacing: .15em
+						+transition(.3s, ease-out, 0s)
+
+	section.mywork
+		height: 1900px
+
+		div#workbgrnd
+			height: 1950px
+			background: white
+
+		ul
+			position: relative
+			top: 100px
+			height: 150px
+
+			li:nth-child(1) a div.colorproject
+				left: 0
+				background: #264A5F
+
+			li:nth-child(2) a div.colorproject
+				right: 0
+				background: #252725
+
+			li:nth-child(3) a div.colorproject
+				left: 0
+				background: #CB2C2F
+
+			li:nth-child(4) a div.colorproject
+				right: 0
+				background: #736153
+
+			li:nth-child(2) a h2, li:nth-child(4) a h2
+				right: 10%
+				left: inherit
+			li
+				display: block
+				width: 100%
+				height: 400px
+				margin-top: 50px
+				background: white
+
+				a
+					position: absolute
+					width: 100%
+					height: 400px
+					display: block
+					box-shadow: 0 0 3px 0 rgba(0,0,0,.4)
+					+transition(.2s, ease-in, 0s)
+
+					div.colorproject
+						position: absolute
+						height: 400px
+						width: 0%
+						+transition(.2s, ease-in, 0s)
+
+					p.left
+						right: inherit
+						left: 5%
+						text-align: left
+
+					p
+						width: 45%
+						text-align: right
+						position: absolute
+						right: 5%
+						margin: 20px 0 20px 0
+						color: rgb(50,50,50)
+						font-size: 10pt
+						font-weight: 400
+						opacity: .8
+						+transition(.2s, ease-in, 0s)
+
+						span
+							opacity: .8
+							font-weight: 300
+
+					p.introduction
+						text-align: left
+						left: 10%
+						width: 35%
+						top: 120px
+						line-height: 180%
+						z-index: 20
+						opacity: 1
+
+					p.introduction.right
+						text-align: right
+						right: 10%
+						left: inherit
+
+
+					h2
+						font-size: 14pt
+						text-transform: uppercase
+						position: absolute
+						left: 10%
+						z-index: 20
+						top: 100px
+						margin: 0
+						color: #333333
+						letter-spacing: .2em
+
+					div.img
+						height: 313px
+						position: relative
+						top: 57px
+						width: 90%
+						margin-left: 5%
+						overflow: hidden
+
+						img
+							width: 100%
+
+				a:hover
+					box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
+					+transition(.2s, ease-in, 0s)
+
+					div.colorproject
+						width: 100%
+						+transition(.3s, ease-out, 0s)
+
+					p
+						color: rgb(250,250,250)
+						+transition(.3s, ease-out, 0s)
+
+					p.introduction
+						color: #333333
+
+			li:hover
+
+			
+			li:first-child
+				margin-top: 0
+
+	section.contactme
+		height: 70%
+
+		div#aboutbgrnd
+			background: url(../_images/back_1.jpg) center center
+			background-size: cover
+
+		div.fullscreen
+			position: relative
+			div#abouttext
+				position: relative
+				left: 50%
+				top: 100%
+				width: 50%
+				background: white
+				padding-top: 50px
+				box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+				+translateY(-100%)
+
+				div
+					position: absolute
+					top: -75px
+					right: 0
+
+				h1
+					margin: 0 0 0 10%
+					text-transform: uppercase
+					font-size: 16pt
+					color: $text_color
+					letter-spacing: .15em
+
+				h2
+					margin: 10px 0 0 10%
+					font-size: 10pt
+					color: #333333
+					letter-spacing: .15em
+					font-weight: 600
+					opacity: .8
+
+				p
+					width: 80% 
+					margin: 50px 0 0 10%
+					line-height: 180%
+					font-size: 10pt
+					font-weight: 600
+					color: #333333
+					padding-bottom: 50px
+
+				a
+					width: 50px
+					height: 50px
+					background: $text_color
+					display: inline-block
+					text-align: center
+					line-height: 50px
+					text-decoration: none
+					margin-right: 10px
+					box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3)
+					border-radius: 3px
+					overflow: hidden
+					+transition(.2s, ease-in, 0s)
+
+					img
+						margin-top: 10px
+						width: 60%
+						+transition(.2s, ease-in, 0s)
+
+				a:last-child
+					margin-right: 0
+
+				a:hover
+					+scale(1.05)
+					box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4)
+					+transition(.2s, ease-in, 0s)
+
+				button
+					position: static
+					+translateX(0)
+					margin-left: 10%
+					margin-bottom: 50px
+					opacity: 1
+					background: $text_color
+					color: $text_color2
+
+
+div.fullscreen
+	height: 100%
+
+div.bgrnd
+	position: absolute
+	width: 100%
+	right: 0
+	height: 70%
+	z-index: -1
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
+
+
+
+button
+	position: fixed
+	top: 5%
+	width: 180px
+	height: 40px
+	box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3)
+	border-radius: 3px
+	background: $text_color2
+	color: $text_color
+	border: none
+	font-size: 10pt
+	letter-spacing: .1em
+	font-weight: 400
+	right: 20%
+	opacity: .5
+	+translateX(50%)
+	+transition(.2s, ease-in, 0s)
+
+button:hover
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4)
+	opacity: 1
+	+transition(.2s, ease-in, 0s)
+
+
+@media screen and (max-width: 720px)
+	
+	main section.contactme div.fullscreen div#abouttext, main section.aboutme div.fullscreen div#abouttext
+		width: 100%
+
+	main section.contactme div.fullscreen div#abouttext
+		left: 0
+
+	main section.mywork ul li a p.left
+		width: 95%
+		display: block
+
+	main section.mywork ul li a p
+		display: none
