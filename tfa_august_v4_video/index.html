@@ -19,19 +19,21 @@
 		<link rel="stylesheet" href="_styles/normalize.css">
 		<link rel="stylesheet" href="_styles/styles.css">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:100,600,800,400,200' rel='stylesheet' type='text/css'>
+		<script src="_js/jquery-2.1.3.js"></script>
+		<script src="_js/intro.js"></script>
 	</head>
 
 	<body>
 
+		<section class="intro">
+				<img src="_images/logo_2.png" id="logo_1"><img src="_images/logo_1.png" id="logo_2">
+		</section>
+
+		<div class="filter"></div>
+
 		<header>
 
-			<section class="intro">
-				<img src="_images/logo_2.png" id="logo_1"><img src="_images/logo_1.png" id="logo_2">
-			</section>
-
-			<div id="filter"></div>
-
-			<div id="background">
+			<div class="background">
 				
 				<video autoplay controls muted loop>
 					<source src="_images/intro_1080.mp4" type="video/mp4">
@@ -54,7 +56,7 @@
 
 		<nav>
 					<ul>
-						<li ><a href="#abouttext">about me</a></li>
+						<li ><a href="#aboutme">about me</a></li>
 						<li ><a href="#mywork">my work</a></li>
 						<li ><a href="#contactme">contact me</a></li>
 					</ul>
@@ -62,7 +64,7 @@
 
 		<main>
 
-			<section>
+			<section id="aboutme">
 				<div class="fullscreen">
 					<div class="text">
 						<h1>an ux design explorer</h1>
@@ -83,11 +85,23 @@
 
 				<div class="myworkfull fullscreen">
 					<ul>
+
+						<li>
+							<a href="dataviz.html">
+								<div class="colorproject" ></div>
+								<h2>datamusic</h2>
+								<p class="introduction">making a web app in 2 weeks, a challenge for the brain and our creativity.</p>
+								<p class="time"><span>given time:</span> 2 weeks</p>
+								<p class="left">web app, developement, design, content</p>
+								<div class="img"><img src="_images/back_dataviz_1.jpg"></div>
+							</a>
+						</li>
+
 						<li>
 							<a>
 								<div class="colorproject" ></div>
 								<h2>e-sports</h2>
-								<p class="introduction">making a web app in 2 weeks, a challenge for the brain and our creativity.</p>
+								<p class="introduction right">making a web app in 2 weeks, a challenge for the brain and our creativity.</p>
 								<p class="time"><span>given time:</span> 2 weeks</p>
 								<p class="left">web app, developement, design, content</p>
 								<div class="img"><img src="_images/test_1.jpg"></div>
@@ -97,22 +111,13 @@
 							<a>
 								<div class="colorproject" ></div>
 								<h2>belgian week</h2>
-								<p class="introduction right">making a web app in 2 weeks, a challenge for the brain and our creativity.</p>
+								<p class="introduction">making a web app in 2 weeks, a challenge for the brain and our creativity.</p>
 								<p class="time"><span>given time:</span> 1 week</p>
 								<p class="left">branding, design, indentity</p>
 								<div class="img"><img src="_images/test_1.jpg"></div>
 							</a>
 						</li>
-						<li>
-							<a>
-								<div class="colorproject" ></div>
-								<h2>web basement</h2>
-								<p class="introduction">making a web app in 2 weeks, a challenge for the brain and our creativity.</p>
-								<p class="time"><span>given time:</span> 24 hours</p>
-								<p class="left">web app, developement, design, content</p>
-								<div class="img"><img src="_images/test_1.jpg"></div>
-							</a>
-						</li>
+
 						<li>
 							<a>
 								<div class="colorproject" ></div>
@@ -159,7 +164,6 @@
 
 		<button class="floating">space for a student ?</button>
 
-		<script src="_js/jquery-2.1.3.js"></script>
 		<script src="_js/main.js"></script>
 		
 	</body>

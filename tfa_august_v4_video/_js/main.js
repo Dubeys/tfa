@@ -57,7 +57,7 @@ $(document).ready(function(){
 					"opacity" : "0"
 				})
 
-				$("#filter").css({
+				$(".filter").css({
 					"opacity" :"0"
 				})
 
@@ -66,14 +66,11 @@ $(document).ready(function(){
 						"z-index" : "-500"
 					})
 
-					$("#filter").css({
+					$(".filter").css({
 						"z-index" : "-500"
 					})
 
-					$("header").css({
-						"z-index" : "-500"
-					})
-				},1000)
+				},500)
 
 			},1200)
 

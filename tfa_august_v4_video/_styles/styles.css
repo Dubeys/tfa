@@ -2,24 +2,87 @@ html {
   font-family: "Raleway", sans-serif;
   height: 100%; }
 
-body::selection {
-  background: #ffb7b7; }
+::selection {
+  background: #9CF0A1;
+  color: #572539; }
 
-body::-moz-selection {
-  background: #ffb7b7; }
+::-webkit-selection {
+  background: #9CF0A1;
+  color: #572539; }
+
+::-moz-selection {
+  background: #9CF0A1;
+  color: #572539; }
+
+::-ms-selection {
+  background: #9CF0A1;
+  color: #572539; }
+
+::-o-selection {
+  background: #9CF0A1;
+  color: #572539; }
 
 body {
   background: black;
   height: 100%;
   padding-top: 0; }
 
+section.intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 200px;
+  box-shadow: 0 0 0 0 black;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -500; }
+  section.intro img {
+    position: fixed;
+    z-index: 2000; }
+  section.intro img#logo_1 {
+    right: 150px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    -webkit-transition: 0.5s ease-out 0s;
+    -moz-transition: 0.5s ease-out 0s;
+    -o-transition: 0.5s ease-out 0s;
+    -ms-transition: 0.5s ease-out 0s;
+    transition: 0.5s ease-out 0s; }
+  section.intro img#logo_2 {
+    left: 150px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    -webkit-transition: 0.5s ease-out 0s;
+    -moz-transition: 0.5s ease-out 0s;
+    -o-transition: 0.5s ease-out 0s;
+    -ms-transition: 0.5s ease-out 0s;
+    transition: 0.5s ease-out 0s; }
+
+div.filter {
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: -500;
+  -webkit-transition: 1s ease-in-out 0s;
+  -moz-transition: 1s ease-in-out 0s;
+  -o-transition: 1s ease-in-out 0s;
+  -ms-transition: 1s ease-in-out 0s;
+  transition: 1s ease-in-out 0s; }
+
 header {
   height: 100%;
   width: 100%;
   margin-top: 0;
-  z-index: 2; }
-  header div#background {
-    background: url(../_images/back_1.jpg);
+  z-index: 0; }
+  header div.background {
+    background: url(../_images/test_1.jpg);
     background-position: 50% 50%;
     background-size: cover;
     height: 100%;
@@ -27,7 +90,7 @@ header {
     margin-top: 0;
     position: fixed;
     z-index: -2; }
-    header div#background video {
+    header div.background video {
       min-height: 100%;
       max-height: 200%;
       min-width: 100%;
@@ -39,19 +102,6 @@ header {
       -o-transform: translateX(-35%);
       -ms-transform: translateX(-35%);
       transform: translateX(-35%); }
-  header div#filter {
-    position: fixed;
-    top: 0;
-    opacity: 1;
-    background: white;
-    width: 100%;
-    height: 100%;
-    z-index: 1950;
-    -webkit-transition: 1s ease-in-out 0s;
-    -moz-transition: 1s ease-in-out 0s;
-    -o-transition: 1s ease-in-out 0s;
-    -ms-transition: 1s ease-in-out 0s;
-    transition: 1s ease-in-out 0s; }
   header section.header {
     position: absolute;
     top: 50%;
@@ -81,40 +131,6 @@ header {
       font-size: 12pt;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       text-transform: uppercase; }
-  header section.intro {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 100px;
-    width: 200px;
-    box-shadow: 0 0 0 0 black;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 2000; }
-    header section.intro img {
-      position: fixed;
-      z-index: 2000; }
-    header section.intro img#logo_1 {
-      right: 150px;
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-      opacity: 1;
-      -webkit-transition: 0.5s ease-out 0s;
-      -moz-transition: 0.5s ease-out 0s;
-      -o-transition: 0.5s ease-out 0s;
-      -ms-transition: 0.5s ease-out 0s;
-      transition: 0.5s ease-out 0s; }
-    header section.intro img#logo_2 {
-      left: 150px;
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-      opacity: 1;
-      -webkit-transition: 0.5s ease-out 0s;
-      -moz-transition: 0.5s ease-out 0s;
-      -o-transition: 0.5s ease-out 0s;
-      -ms-transition: 0.5s ease-out 0s;
-      transition: 0.5s ease-out 0s; }
 
 nav {
   width: 90%;
@@ -163,6 +179,51 @@ nav {
         -ms-transition: 0.3s ease-out 0s;
         transition: 0.3s ease-out 0s; }
 
+header.headerdataviz {
+  height: 500px;
+  position: relative; }
+  header.headerdataviz section.header {
+    top: 100px;
+    text-align: left;
+    width: 90%;
+    max-width: 1080px; }
+    header.headerdataviz section.header div {
+      height: 75px;
+      width: 75px;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 5000; }
+      header.headerdataviz section.header div img {
+        height: 75px;
+        position: relative;
+        right: 0px;
+        -webkit-transition: 0.3s ease-in-out 0s;
+        -moz-transition: 0.3s ease-in-out 0s;
+        -o-transition: 0.3s ease-in-out 0s;
+        -ms-transition: 0.3s ease-in-out 0s;
+        transition: 0.3s ease-in-out 0s; }
+    header.headerdataviz section.header div:hover {
+      cursor: pointer; }
+      header.headerdataviz section.header div:hover img {
+        right: 75px;
+        -webkit-transition: 0.3s ease-in-out 0s;
+        -moz-transition: 0.3s ease-in-out 0s;
+        -o-transition: 0.3s ease-in-out 0s;
+        -ms-transition: 0.3s ease-in-out 0s;
+        transition: 0.3s ease-in-out 0s; }
+  header.headerdataviz div.background {
+    height: 500px;
+    background: url(../_images/back_dataviz_1.jpg) center center;
+    background-size: cover; }
+
+nav.navdataviz {
+  background: #071F1F;
+  top: 400px;
+  bottom: inherit; }
+  nav.navdataviz ul li {
+    width: 19%; }
+
 button {
   padding: 0 20px 0 20px;
   height: 40px;
@@ -173,258 +234,269 @@ button {
   font-weight: 400;
   border: none; }
 
-main section {
-  background: url(../_images/back_1.jpg) center center;
-  background-size: cover; }
-  main section div.fullscreen {
-    height: 100%;
-    width: 90%;
-    max-width: 1080px;
-    margin: 0 auto; }
-    main section div.fullscreen div.text {
-      width: 50%;
-      background: white;
-      padding-top: 50px;
-      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
-      margin-bottom: 300px; }
-      main section div.fullscreen div.text h1 {
-        margin: 0 0 0 10%;
-        text-transform: uppercase;
-        font-size: 16pt;
-        color: #572539;
-        letter-spacing: 0.15em; }
-      main section div.fullscreen div.text h2 {
-        margin: 10px 0 0 10%;
-        font-size: 10pt;
-        color: #333333;
-        letter-spacing: 0.15em;
-        font-weight: 600;
-        opacity: 0.8; }
-      main section div.fullscreen div.text p {
-        width: 80%;
-        margin: 50px 0 0 10%;
-        line-height: 180%;
-        font-size: 10pt;
-        font-weight: 600;
-        color: #333333;
-        padding-bottom: 50px; }
-        main section div.fullscreen div.text p a {
-          text-decoration: none;
+main {
+  position: relative;
+  z-index: 1; }
+  main section {
+    background: url(../_images/back_1.jpg) center center;
+    background-size: cover; }
+    main section div.fullscreen {
+      height: 100%;
+      width: 90%;
+      max-width: 1080px;
+      margin: 0 auto; }
+      main section div.fullscreen div.text {
+        width: 50%;
+        background: white;
+        padding-top: 50px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+        margin-bottom: 300px; }
+        main section div.fullscreen div.text h1 {
+          margin: 0 0 0 10%;
+          text-transform: uppercase;
+          font-size: 16pt;
           color: #572539;
-          font-size: 10pt;
-          font-weight: 800;
-          letter-spacing: 0.05em;
-          -webkit-transition: 0.2s ease-in 0s;
-          -moz-transition: 0.2s ease-in 0s;
-          -o-transition: 0.2s ease-in 0s;
-          -ms-transition: 0.2s ease-in 0s;
-          transition: 0.2s ease-in 0s;
-          width: 50px;
-          display: inline-block;
-          text-align: center; }
-        main section div.fullscreen div.text p a:hover {
           letter-spacing: 0.15em;
-          -webkit-transition: 0.3s ease-out 0s;
-          -moz-transition: 0.3s ease-out 0s;
-          -o-transition: 0.3s ease-out 0s;
-          -ms-transition: 0.3s ease-out 0s;
-          transition: 0.3s ease-out 0s; }
-main section.mywork {
-  height: 1900px;
-  background: white; }
-  main section.mywork div.myworkfull {
-    height: 1950px; }
-  main section.mywork ul {
-    position: relative;
-    top: 100px;
-    height: 150px; }
-    main section.mywork ul li:nth-child(1) a div.colorproject {
-      left: 0;
-      background: #264A5F; }
-    main section.mywork ul li:nth-child(2) a div.colorproject {
-      right: 0;
-      background: #252725; }
-    main section.mywork ul li:nth-child(3) a div.colorproject {
-      left: 0;
-      background: #CB2C2F; }
-    main section.mywork ul li:nth-child(4) a div.colorproject {
-      right: 0;
-      background: #736153; }
-    main section.mywork ul li:nth-child(2) a h2, main section.mywork ul li:nth-child(4) a h2 {
-      right: 10%;
-      left: inherit; }
-    main section.mywork ul li {
-      display: block;
-      width: 100%;
-      height: 400px;
-      margin-top: 50px;
-      background: white; }
-      main section.mywork ul li a {
-        position: absolute;
+          width: 80%; }
+        main section div.fullscreen div.text h2 {
+          margin: 10px 0 0 10%;
+          font-size: 10pt;
+          color: #333333;
+          letter-spacing: 0.15em;
+          font-weight: 600;
+          opacity: 0.8;
+          width: 80%; }
+        main section div.fullscreen div.text p {
+          width: 80%;
+          margin: 50px 0 0 10%;
+          line-height: 180%;
+          font-size: 10pt;
+          font-weight: 600;
+          color: #333333;
+          padding-bottom: 50px; }
+          main section div.fullscreen div.text p a {
+            text-decoration: none;
+            color: #572539;
+            font-size: 10pt;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            -webkit-transition: 0.2s ease-in 0s;
+            -moz-transition: 0.2s ease-in 0s;
+            -o-transition: 0.2s ease-in 0s;
+            -ms-transition: 0.2s ease-in 0s;
+            transition: 0.2s ease-in 0s;
+            width: 50px;
+            display: inline-block;
+            text-align: center; }
+          main section div.fullscreen div.text p a:hover {
+            letter-spacing: 0.15em;
+            -webkit-transition: 0.3s ease-out 0s;
+            -moz-transition: 0.3s ease-out 0s;
+            -o-transition: 0.3s ease-out 0s;
+            -ms-transition: 0.3s ease-out 0s;
+            transition: 0.3s ease-out 0s; }
+  main section.mywork {
+    height: 1900px;
+    background: white; }
+    main section.mywork div.myworkfull {
+      height: 1950px; }
+    main section.mywork ul {
+      position: relative;
+      top: 100px;
+      height: 150px; }
+      main section.mywork ul li:nth-child(1) a div.colorproject {
+        left: 0;
+        background: #009999; }
+      main section.mywork ul li:nth-child(2) a div.colorproject {
+        right: 0;
+        background: #264A5F; }
+      main section.mywork ul li:nth-child(3) a div.colorproject {
+        left: 0;
+        background: #252725; }
+      main section.mywork ul li:nth-child(4) a div.colorproject {
+        right: 0;
+        background: #736153; }
+      main section.mywork ul li:nth-child(2) a h2, main section.mywork ul li:nth-child(4) a h2 {
+        right: 10%;
+        left: inherit; }
+      main section.mywork ul li {
+        display: block;
         width: 100%;
         height: 400px;
-        display: block;
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
-        -webkit-transition: 0.2s ease-in 0s;
-        -moz-transition: 0.2s ease-in 0s;
-        -o-transition: 0.2s ease-in 0s;
-        -ms-transition: 0.2s ease-in 0s;
-        transition: 0.2s ease-in 0s; }
-        main section.mywork ul li a div.colorproject {
+        margin-top: 50px;
+        background: white; }
+        main section.mywork ul li a {
           position: absolute;
-          height: 400px;
-          width: 0%;
-          padding-top: 0;
-          -webkit-transition: 0.2s ease-in 0s;
-          -moz-transition: 0.2s ease-in 0s;
-          -o-transition: 0.2s ease-in 0s;
-          -ms-transition: 0.2s ease-in 0s;
-          transition: 0.2s ease-in 0s; }
-        main section.mywork ul li a p.left {
-          right: inherit;
-          left: 5%;
-          text-align: left; }
-        main section.mywork ul li a p {
-          width: 45%;
-          text-align: right;
-          position: absolute;
-          right: 5%;
-          margin: 20px 0 20px 0;
-          color: #323232;
-          font-size: 10pt;
-          font-weight: 400;
-          opacity: 0.8;
-          -webkit-transition: 0.2s ease-in 0s;
-          -moz-transition: 0.2s ease-in 0s;
-          -o-transition: 0.2s ease-in 0s;
-          -ms-transition: 0.2s ease-in 0s;
-          transition: 0.2s ease-in 0s; }
-          main section.mywork ul li a p span {
-            opacity: 0.8;
-            font-weight: 300; }
-        main section.mywork ul li a p.introduction {
-          text-align: left;
-          left: 10%;
-          width: 35%;
-          top: 120px;
-          line-height: 180%;
-          z-index: 20;
-          opacity: 1; }
-        main section.mywork ul li a p.introduction.right {
-          text-align: right;
-          right: 10%;
-          left: inherit; }
-        main section.mywork ul li a h2 {
-          font-size: 14pt;
-          text-transform: uppercase;
-          position: absolute;
-          left: 10%;
-          z-index: 20;
-          top: 100px;
-          margin: 0;
-          color: #333333;
-          letter-spacing: 0.2em; }
-        main section.mywork ul li a div.img {
-          height: 313px;
-          position: relative;
-          top: 57px;
-          width: 90%;
-          margin: 0 0 0 5%;
-          overflow: hidden;
-          padding: 0;
-          box-shadow: none; }
-          main section.mywork ul li a div.img img {
-            width: 100%; }
-      main section.mywork ul li a:hover {
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-        -webkit-transition: 0.2s ease-in 0s;
-        -moz-transition: 0.2s ease-in 0s;
-        -o-transition: 0.2s ease-in 0s;
-        -ms-transition: 0.2s ease-in 0s;
-        transition: 0.2s ease-in 0s; }
-        main section.mywork ul li a:hover div.colorproject {
           width: 100%;
-          -webkit-transition: 0.3s ease-out 0s;
-          -moz-transition: 0.3s ease-out 0s;
-          -o-transition: 0.3s ease-out 0s;
-          -ms-transition: 0.3s ease-out 0s;
-          transition: 0.3s ease-out 0s; }
-        main section.mywork ul li a:hover p {
-          color: #fafafa;
-          -webkit-transition: 0.3s ease-out 0s;
-          -moz-transition: 0.3s ease-out 0s;
-          -o-transition: 0.3s ease-out 0s;
-          -ms-transition: 0.3s ease-out 0s;
-          transition: 0.3s ease-out 0s; }
-        main section.mywork ul li a:hover p.introduction {
-          color: #333333; }
-    main section.mywork ul li:first-child {
-      margin-top: 0; }
-main div.fullscreen.textbottom {
-  position: relative; }
-  main div.fullscreen.textbottom div.threehundred {
-    height: 300px;
-    width: 100%; }
-  main div.fullscreen.textbottom div.text.righttext {
-    position: relative;
-    left: 50%;
-    top: 100%;
-    margin-bottom: 0; }
-    main div.fullscreen.textbottom div.text.righttext div {
-      position: absolute;
-      top: -75px;
-      right: 0; }
-      main div.fullscreen.textbottom div.text.righttext div a {
-        width: 50px;
-        height: 50px;
-        background: #572539;
-        display: inline-block;
-        text-align: center;
-        line-height: 50px;
-        text-decoration: none;
-        margin-right: 10px;
-        box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
-        border-radius: 3px;
-        overflow: hidden;
-        -webkit-transition: 0.2s ease-in 0s;
-        -moz-transition: 0.2s ease-in 0s;
-        -o-transition: 0.2s ease-in 0s;
-        -ms-transition: 0.2s ease-in 0s;
-        transition: 0.2s ease-in 0s; }
-        main div.fullscreen.textbottom div.text.righttext div a img {
-          margin-top: 10px;
-          width: 60%;
+          height: 400px;
+          display: block;
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
           -webkit-transition: 0.2s ease-in 0s;
           -moz-transition: 0.2s ease-in 0s;
           -o-transition: 0.2s ease-in 0s;
           -ms-transition: 0.2s ease-in 0s;
           transition: 0.2s ease-in 0s; }
-      main div.fullscreen.textbottom div.text.righttext div a:last-child {
-        margin-right: 0; }
-      main div.fullscreen.textbottom div.text.righttext div a:hover {
-        -webkit-transform: scale(1.05);
-        -moz-transform: scale(1.05);
-        -o-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05);
-        box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
-        -webkit-transition: 0.2s ease-in 0s;
-        -moz-transition: 0.2s ease-in 0s;
-        -o-transition: 0.2s ease-in 0s;
-        -ms-transition: 0.2s ease-in 0s;
-        transition: 0.2s ease-in 0s; }
-    main div.fullscreen.textbottom div.text.righttext button {
-      position: static;
-      -webkit-transform: translateX(0);
-      -moz-transform: translateX(0);
-      -o-transform: translateX(0);
-      -ms-transform: translateX(0);
-      transform: translateX(0);
-      margin-left: 10%;
-      margin-bottom: 50px;
-      opacity: 1;
-      background: #572539;
-      color: white; }
+          main section.mywork ul li a div.colorproject {
+            position: absolute;
+            height: 400px;
+            width: 0%;
+            padding-top: 0;
+            -webkit-transition: 0.2s ease-in 0s;
+            -moz-transition: 0.2s ease-in 0s;
+            -o-transition: 0.2s ease-in 0s;
+            -ms-transition: 0.2s ease-in 0s;
+            transition: 0.2s ease-in 0s; }
+          main section.mywork ul li a p.left {
+            right: inherit;
+            left: 5%;
+            text-align: left; }
+          main section.mywork ul li a p {
+            width: 45%;
+            text-align: right;
+            position: absolute;
+            right: 5%;
+            margin: 20px 0 20px 0;
+            color: #323232;
+            font-size: 10pt;
+            font-weight: 400;
+            opacity: 0.8;
+            -webkit-transition: 0.2s ease-in 0s;
+            -moz-transition: 0.2s ease-in 0s;
+            -o-transition: 0.2s ease-in 0s;
+            -ms-transition: 0.2s ease-in 0s;
+            transition: 0.2s ease-in 0s; }
+            main section.mywork ul li a p span {
+              opacity: 0.8;
+              font-weight: 300; }
+          main section.mywork ul li a p.introduction {
+            text-align: left;
+            left: 10%;
+            width: 35%;
+            top: 120px;
+            line-height: 180%;
+            z-index: 20;
+            opacity: 1; }
+          main section.mywork ul li a p.introduction.right {
+            text-align: right;
+            right: 10%;
+            left: inherit; }
+          main section.mywork ul li a h2 {
+            font-size: 14pt;
+            text-transform: uppercase;
+            position: absolute;
+            left: 10%;
+            z-index: 20;
+            top: 100px;
+            margin: 0;
+            color: #333333;
+            letter-spacing: 0.2em; }
+          main section.mywork ul li a div.img {
+            height: 313px;
+            position: relative;
+            top: 57px;
+            width: 90%;
+            overflow: hidden;
+            margin: 0 0 0 5%;
+            overflow: hidden;
+            padding: 0;
+            box-shadow: none; }
+            main section.mywork ul li a div.img img {
+              width: 100%;
+              min-width: 430px;
+              position: absolute;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+              -moz-transform: translateX(-50%);
+              -o-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+        main section.mywork ul li a:hover {
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+          -webkit-transition: 0.2s ease-in 0s;
+          -moz-transition: 0.2s ease-in 0s;
+          -o-transition: 0.2s ease-in 0s;
+          -ms-transition: 0.2s ease-in 0s;
+          transition: 0.2s ease-in 0s; }
+          main section.mywork ul li a:hover div.colorproject {
+            width: 100%;
+            -webkit-transition: 0.3s ease-out 0s;
+            -moz-transition: 0.3s ease-out 0s;
+            -o-transition: 0.3s ease-out 0s;
+            -ms-transition: 0.3s ease-out 0s;
+            transition: 0.3s ease-out 0s; }
+          main section.mywork ul li a:hover p {
+            color: #fafafa;
+            -webkit-transition: 0.3s ease-out 0s;
+            -moz-transition: 0.3s ease-out 0s;
+            -o-transition: 0.3s ease-out 0s;
+            -ms-transition: 0.3s ease-out 0s;
+            transition: 0.3s ease-out 0s; }
+          main section.mywork ul li a:hover p.introduction {
+            color: #333333; }
+      main section.mywork ul li:first-child {
+        margin-top: 0; }
+  main div.fullscreen.textbottom {
+    position: relative; }
+    main div.fullscreen.textbottom div.threehundred {
+      height: 300px;
+      width: 100%; }
+    main div.fullscreen.textbottom div.text.righttext {
+      margin-bottom: 0; }
+      main div.fullscreen.textbottom div.text.righttext div {
+        position: absolute;
+        top: -75px;
+        right: 0; }
+        main div.fullscreen.textbottom div.text.righttext div a {
+          width: 50px;
+          height: 50px;
+          background: #572539;
+          display: inline-block;
+          text-align: center;
+          line-height: 50px;
+          text-decoration: none;
+          margin-right: 10px;
+          box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+          border-radius: 3px;
+          overflow: hidden;
+          -webkit-transition: 0.2s ease-in 0s;
+          -moz-transition: 0.2s ease-in 0s;
+          -o-transition: 0.2s ease-in 0s;
+          -ms-transition: 0.2s ease-in 0s;
+          transition: 0.2s ease-in 0s; }
+          main div.fullscreen.textbottom div.text.righttext div a img {
+            margin-top: 10px;
+            width: 60%;
+            -webkit-transition: 0.2s ease-in 0s;
+            -moz-transition: 0.2s ease-in 0s;
+            -o-transition: 0.2s ease-in 0s;
+            -ms-transition: 0.2s ease-in 0s;
+            transition: 0.2s ease-in 0s; }
+        main div.fullscreen.textbottom div.text.righttext div a:last-child {
+          margin-right: 0; }
+        main div.fullscreen.textbottom div.text.righttext div a:hover {
+          -webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);
+          -o-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          transform: scale(1.05);
+          box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+          -webkit-transition: 0.2s ease-in 0s;
+          -moz-transition: 0.2s ease-in 0s;
+          -o-transition: 0.2s ease-in 0s;
+          -ms-transition: 0.2s ease-in 0s;
+          transition: 0.2s ease-in 0s; }
+      main div.fullscreen.textbottom div.text.righttext button {
+        position: static;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        margin-left: 10%;
+        margin-bottom: 50px;
+        opacity: 1;
+        background: #572539;
+        color: white; }
 
 div.bgrnd {
   position: absolute;
@@ -461,6 +533,124 @@ button.floating:hover {
   -ms-transition: 0.2s ease-in 0s;
   transition: 0.2s ease-in 0s; }
 
+section.plaintext {
+  background: white; }
+  section.plaintext div.fullscreen div.text {
+    margin-bottom: 0;
+    float: left;
+    background: none; }
+    section.plaintext div.fullscreen div.text img {
+      margin-left: 10%;
+      opacity: 0.5; }
+    section.plaintext div.fullscreen div.text h1 {
+      color: #071F1F; }
+  section.plaintext div.fullscreen div.text:nth-child(3) {
+    float: none;
+    clear: both; }
+    section.plaintext div.fullscreen div.text:nth-child(3) p {
+      margin: 25px 0 0 10%; }
+  section.plaintext div.fullscreen div.text:nth-child(4) {
+    margin-bottom: 100px; }
+  section.plaintext div.fullscreen div.addtext {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    width: 50%;
+    background: white;
+    float: left;
+    margin: 0;
+    padding-bottom: 30px; }
+    section.plaintext div.fullscreen div.addtext ul {
+      font-family: "Courgette", cursive;
+      padding-left: 25px;
+      width: 80%;
+      margin-left: 5%; }
+      section.plaintext div.fullscreen div.addtext ul li {
+        margin-bottom: 20px;
+        line-height: 180%;
+        font-size: 10pt;
+        font-weight: 500;
+        color: #071F1F;
+        text-transform: lowercase; }
+  section.plaintext div.fullscreen::after {
+    content: "";
+    display: block;
+    clear: both; }
+
+section.plaintext.fourcorrel div.fullscreen div.text div.textimage {
+  overflow: hidden;
+  width: 80%;
+  margin: 50px 0 0 10%;
+  height: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+  section.plaintext.fourcorrel div.fullscreen div.text div.textimage img {
+    margin: 0;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 1; }
+section.plaintext.fourcorrel div.fullscreen div.text:nth-child(3) {
+  float: left;
+  clear: none;
+  margin-bottom: 50px; }
+section.plaintext.fourcorrel div.fullscreen div.text:nth-child(1), section.plaintext.fourcorrel div.fullscreen div.text:nth-child(2) {
+  margin-bottom: 50px; }
+
+section div.fullscreen div.text.noshadow {
+  box-shadow: none; }
+
+div.text.righttext {
+  position: relative;
+  left: 50%;
+  top: 100%; }
+
+section.forworddataviz {
+  background: url(../_images/back_dataviz_2.jpg) center center;
+  background-size: cover; }
+  section.forworddataviz div.fullscreen div.text h1 {
+    color: #071F1F; }
+
+section.goodnessdataviz {
+  background: url(../_images/back_dataviz_3.jpg) center center;
+  background-size: cover; }
+  section.goodnessdataviz div.fullscreen div.text h1 {
+    color: #071F1F; }
+
+@media screen and (max-width: 820px) {
+  p.introduction.right ~ div.img img {
+    left: 0%; }
+
+  main section.mywork ul li a div.img img {
+    left: 100%; }
+
+  section.mywork div.myworkfull ul li a {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.2s ease-in 0s;
+    -moz-transition: 0.2s ease-in 0s;
+    -o-transition: 0.2s ease-in 0s;
+    -ms-transition: 0.2s ease-in 0s;
+    transition: 0.2s ease-in 0s; }
+    section.mywork div.myworkfull ul li a div.colorproject {
+      width: 100%;
+      -webkit-transition: 0.3s ease-out 0s;
+      -moz-transition: 0.3s ease-out 0s;
+      -o-transition: 0.3s ease-out 0s;
+      -ms-transition: 0.3s ease-out 0s;
+      transition: 0.3s ease-out 0s; }
+    section.mywork div.myworkfull ul li a p {
+      color: #fafafa;
+      -webkit-transition: 0.3s ease-out 0s;
+      -moz-transition: 0.3s ease-out 0s;
+      -o-transition: 0.3s ease-out 0s;
+      -ms-transition: 0.3s ease-out 0s;
+      transition: 0.3s ease-out 0s; }
+    section.mywork div.myworkfull ul li a p.introduction {
+      color: white; }
+    section.mywork div.myworkfull ul li a h2 {
+      color: white; } }
 @media screen and (max-width: 720px) {
   main section div.fullscreen div.text {
     width: 100%; }
@@ -473,10 +663,43 @@ button.floating:hover {
     display: block; }
 
   main section.mywork ul li a p.time {
-    display: none; } }
+    display: none; }
+
+  section.plaintext div.fullscreen div.addtext {
+    width: 100%; } }
+@media screen and (max-width: 580px) {
+  p.introduction.right ~ div.img img {
+    display: none; }
+
+  main section.mywork ul li a div.img img {
+    display: none; }
+
+  section.mywork div.myworkfull ul li a p.introduction {
+    color: white; }
+  section.mywork div.myworkfull ul li a h2 {
+    color: white; } }
 @media screen and (max-width: 380px) {
   nav ul li {
     display: block;
-    width: 100%; } }
+    width: 100%; }
+
+  p.introduction.right ~ div.img img {
+    left: 30%;
+    display: block; }
+
+  main section.mywork ul li a div.img img {
+    left: 70%;
+    display: block; }
+
+  section.mywork div.myworkfull ul li a p.introduction {
+    color: #333333; }
+  section.mywork div.myworkfull ul li a h2 {
+    color: #333333; } }
+@media screen and (max-width: 320px) {
+  p.introduction.right ~ div.img img {
+    left: 20%; }
+
+  main section.mywork ul li a div.img img {
+    left: 80%; } }
 
 /*# sourceMappingURL=styles.css.map */

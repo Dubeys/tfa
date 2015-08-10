@@ -1,5 +1,11 @@
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//--------------------------------------------------------------------------------------------------SASS
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+
 $text_color: #572539
 $text_color2: white
+
+$dataviz_1: #071F1F
 
 =transform($option)
 	-webkit-transform: $option
@@ -47,15 +53,45 @@ $text_color2: white
 	background: -ms-linear-gradient(top, $color1 0%,$color2 100%)
 	background: linear-gradient(to bottom, $color1 0%,$color2 100%)
 
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//--------------------------------------------------------------------------------------------------HEADER
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
 html
 	font-family: 'Raleway', sans-serif
 	height: 100%
 
-body::selection 
-	background: #ffb7b7
+::selection 
+	background: #9CF0A1
+	color: $text_color
 
-body::-moz-selection 
-	background: #ffb7b7
+
+::-webkit-selection 
+	background: #9CF0A1
+	color: $text_color
+
+
+::-moz-selection 
+	background: #9CF0A1
+	color: $text_color
+
+
+::-ms-selection
+	background: #9CF0A1
+	color: $text_color
+
+
+::-o-selection
+	background: #9CF0A1
+	color: $text_color
 
 
 body
@@ -63,15 +99,51 @@ body
 	height: 100%
 	padding-top: 0
 
+section.intro
+	position: fixed
+	top: 50%
+	left: 50%
+	height: 100px
+	width: 200px
+	box-shadow: 0 0 0 0 black
+	+translateXaY(-50%,-50%)
+	z-index: -500
+
+	img
+		position: fixed
+		z-index: 2000
+
+	img#logo_1
+		right: 150px
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
+		opacity: 1
+		+transition(.5s, ease-out, 0s)
+
+	img#logo_2
+		left: 150px
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
+		opacity: 1
+		+transition(.5s, ease-out, 0s)
+
+div.filter
+	position: fixed
+	top: 0
+	opacity: 1
+	background: $text_color2
+	width: 100%
+	height: 100%
+	z-index: -500
+	+transition(1s, ease-in-out,0s)
+
 header
 	height: 100%
 	width: 100%
 	margin-top: 0
 
-	z-index: 2
+	z-index: 0
 
-	div#background
-		background: url(../_images/back_1.jpg)
+	div.background
+		background: url(../_images/test_1.jpg)
 		background-position: 50% 50%
 		background-size: cover
 		height: 100%
@@ -89,16 +161,6 @@ header
 			top: 0
 			left: 35%
 			+translateX(-35%)
-
-	div#filter
-		position: fixed
-		top: 0
-		opacity: 1
-		background: $text_color2
-		width: 100%
-		height: 100%
-		z-index: 1950
-		+transition(1s, ease-in-out,0s)
 
 	section.header
 		position: absolute
@@ -128,32 +190,6 @@ header
 			font-size: 12pt
 			text-shadow: 0 0 10px rgba(0,0,0,.5)
 			text-transform: uppercase
-
-	section.intro
-		position: fixed
-		top: 50%
-		left: 50%
-		height: 100px
-		width: 200px
-		box-shadow: 0 0 0 0 black
-		+translateXaY(-50%,-50%)
-		z-index: 2000
-
-		img
-			position: fixed
-			z-index: 2000
-
-		img#logo_1
-			right: 150px
-			box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
-			opacity: 1
-			+transition(.5s, ease-out, 0s)
-
-		img#logo_2
-			left: 150px
-			box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
-			opacity: 1
-			+transition(.5s, ease-out, 0s)
 
 nav
 	width: 90%
@@ -195,8 +231,68 @@ nav
 				+transition(.3s, ease-out, 0s)
 
 
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
 //lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
-//------------------------------------------------------------------------------------------------MAIN CONTENT
+//--------------------------------------------------------------------------------------------------DATAVIZ HEARDER
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+header.headerdataviz
+	height: 500px
+	position: relative
+
+	section.header
+		top: 100px
+		text-align: left
+		width: 90%
+		max-width: 1080px
+
+		div
+			height: 75px
+			width: 75px
+			box-shadow: 0 0 3px 0 rgba(0,0,0,.3)
+			position: relative
+			overflow: hidden
+			z-index: 5000
+
+			img
+				height: 75px
+				position: relative
+				right: 0px
+				+transition(.3s, ease-in-out, 0s)
+
+		div:hover
+			cursor: pointer
+			img
+				right: 75px
+				+transition(.3s, ease-in-out, 0s)
+
+
+	div.background
+		height: 500px
+		background: url(../_images/back_dataviz_1.jpg) center center
+		background-size: cover
+
+nav.navdataviz
+	background: $dataviz_1
+	top: 400px
+	bottom: inherit
+
+	ul
+		li
+			width: 19%
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//--------------------------------------------------------------------------------------------------MAIN CONTENT
 //lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
 
 button
@@ -210,7 +306,8 @@ button
 	border: none
 
 main
-
+	position: relative
+	z-index: 1
 	section
 		background: url(../_images/back_1.jpg) center center
 		background-size: cover
@@ -234,6 +331,7 @@ main
 					font-size: 16pt
 					color: $text_color
 					letter-spacing: .15em
+					width: 80%
 
 				h2
 					margin: 10px 0 0 10%
@@ -242,6 +340,7 @@ main
 					letter-spacing: .15em
 					font-weight: 600
 					opacity: .8
+					width: 80%
 
 				p
 					width: 80% 
@@ -281,15 +380,14 @@ main
 
 			li:nth-child(1) a div.colorproject
 				left: 0
-				background: #264A5F
-
+				background: #009999
 			li:nth-child(2) a div.colorproject
 				right: 0
-				background: #252725
+				background: #264A5F
 
 			li:nth-child(3) a div.colorproject
 				left: 0
-				background: #CB2C2F
+				background: #252725
 
 			li:nth-child(4) a div.colorproject
 				right: 0
@@ -372,6 +470,7 @@ main
 						position: relative
 						top: 57px
 						width: 90%
+						overflow: hidden
 						margin: 0 0 0 5%
 						overflow: hidden
 						padding: 0
@@ -379,6 +478,10 @@ main
 
 						img
 							width: 100%
+							min-width: 430px
+							position: absolute
+							left: 50%
+							+translateX(-50%)
 
 				a:hover
 					box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
@@ -409,9 +512,6 @@ main
 			width: 100%
 
 		div.text.righttext
-			position: relative
-			left: 50%
-			top: 100%
 			margin-bottom: 0
 			div
 				position: absolute
@@ -477,10 +577,153 @@ button.floating:hover
 	opacity: 1
 	+transition(.2s, ease-in, 0s)
 
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
 //lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
-//------------------------------------------------------------------------------------------------MAIN CONTENT
+//---------------------------------------------------------------------------------------------------DATAVIZ CONTENT
 //lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
 
+section.plaintext
+	background: white
+	div.fullscreen
+		div.text
+			margin-bottom: 0
+			float: left
+			background: none
+			img
+				margin-left: 10%
+				opacity: .5
+
+			h1
+				color: $dataviz_1
+
+		div.text:nth-child(3)
+			float: none
+			clear: both
+			p
+				margin: 25px 0 0 10%
+
+		div.text:nth-child(4)
+			margin-bottom: 100px
+
+		div.addtext
+			box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+			width: 50%
+			background: white
+			float: left
+			margin: 0
+			padding-bottom: 30px
+
+			ul
+				font-family: 'Courgette', cursive
+				padding-left: 25px
+				width: 80%
+				margin-left: 5%
+
+				li
+					margin-bottom: 20px
+					line-height: 180%
+					font-size: 10pt
+					font-weight: 500
+					color: $dataviz_1
+					text-transform: lowercase
+
+	div.fullscreen::after
+		content: ""
+		display: block
+		clear: both
+
+section.plaintext.fourcorrel
+	div.fullscreen
+		div.text
+			div.textimage
+				overflow: hidden
+				width: 80%
+				margin: 50px 0 0 10%
+				height: 300px
+				box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+				img
+					margin: 0
+					height: 100%
+					position: relative
+					left: 50%
+					+translateX(-50%)
+					opacity: 1
+
+		div.text:nth-child(3)
+			float: left
+			clear: none
+			margin-bottom: 50px
+
+		div.text:nth-child(1), div.text:nth-child(2)
+			margin-bottom: 50px
+
+section
+	div.fullscreen
+		div.text.noshadow
+			box-shadow: none
+
+
+div.text.righttext
+	position: relative
+	left: 50%
+	top: 100%
+
+section.forworddataviz
+	background: url(../_images/back_dataviz_2.jpg) center center
+	background-size: cover
+
+	div.fullscreen
+		div.text
+			h1
+				color: $dataviz_1
+
+section.goodnessdataviz
+	background: url(../_images/back_dataviz_3.jpg) center center
+	background-size: cover
+
+	div.fullscreen
+		div.text
+			h1
+				color: $dataviz_1
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//---------------------------------------------------------------------------------------------------MEDIA QUERIES
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+
+@media screen and (max-width: 820px)
+	p.introduction.right ~ div.img img
+		left: 0%
+
+	main section.mywork ul li a div.img img
+		left: 100%
+
+	section.mywork div.myworkfull ul li a
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
+		+transition(.2s, ease-in, 0s)
+
+		div.colorproject
+			width: 100%
+			+transition(.3s, ease-out, 0s)
+
+		p
+			color: rgb(250,250,250)
+			+transition(.3s, ease-out, 0s)
+
+		p.introduction
+			color: white
+
+		h2
+			color: white
 
 @media screen and (max-width: 720px)
 	
@@ -497,8 +740,53 @@ button.floating:hover
 	main section.mywork ul li a p.time
 		display: none
 
+	section.plaintext
+		div.fullscreen
+			div.addtext
+				width: 100%
+
+@media screen and (max-width: 580px)
+	
+	p.introduction.right ~ div.img img
+		display: none
+
+	main section.mywork ul li a div.img img
+		display: none
+
+	section.mywork div.myworkfull ul li a
+
+		p.introduction
+			color: white
+
+		h2
+			color: white
+
 @media screen and (max-width: 380px)
 
 	nav	ul li
 		display: block
 		width: 100%
+
+	p.introduction.right ~ div.img img
+		left: 30%
+		display: block
+
+	main section.mywork ul li a div.img img
+		left: 70%
+		display: block
+
+	section.mywork div.myworkfull ul li a
+
+		p.introduction
+			color: #333333
+
+		h2
+			color: #333333
+
+@media screen and (max-width: 320px)
+	
+	p.introduction.right ~ div.img img
+		left: 20%
+
+	main section.mywork ul li a div.img img
+		left: 80%
