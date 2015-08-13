@@ -51,11 +51,11 @@
 
 		<nav class="navdataviz">
 					<ul>
-						<li ><a href="#abouttext">intro</a></li>
-						<li ><a href="#mywork">brainstorm</a></li>
-						<li ><a href="#contactme">gathering</a></li>
-						<li ><a href="#mywork">designing</a></li>
-						<li ><a href="#contactme">experience</a></li>
+						<li ><a href="#intro">intro</a></li>
+						<li ><a href="#brainstorm">brainstorm</a></li>
+						<li ><a href="#gathering">gathering</a></li>
+						<li ><a href="#designing">designing</a></li>
+						<li ><a href="#experience">experience</a></li>
 					</ul>
 		</nav>
 
@@ -63,7 +63,7 @@
 
 			<section class="forworddataviz">
 				<div class="fullscreen">
-					<div class="text">
+					<div class="text" id="intro">
 						<h1>dataviz the workshop</h1>
 						<h2>you are data, music is data, everything is data</h2>
 
@@ -76,7 +76,7 @@
 
 			<section class="plaintext">
 				<div class="fullscreen">
-					<div class="text noshadow">
+					<div class="text noshadow" id="brainstorm">
 						<h1>a fruitfull brainstorm</h1>
 						<h2>ideas bursting out of our heads</h2>
 
@@ -108,7 +108,7 @@
 						</p>
 					</div>
 
-					<div class="text noshadow">
+					<div class="text noshadow" id="gathering">
 						<h1>The searching process</h1>
 						<h2>a long and tedious one</h2>
 
@@ -130,7 +130,7 @@
 
 						<p>	
 							After two days of exploration on the web we finally found the support of our project : a big database containing 17000 songs with a ton of information about each of them.
-							We needed to roam around the database to find interesting correlation.
+							We needed to roam around the database to find interesting correlations.
 							We found four different ones :
 						</p>
 					</div>
@@ -174,32 +174,142 @@
 							<img src="_images/dataviz_4.jpg">
 						</div>
 					</div>
-
+				</div>
 			</section>
 
-			<section id="contactme">
-				<div class="fullscreen textbottom" id="aboutbgrnd">
+			<section class="identitydataviz">
+				<div class="fullscreen">
+					<div class="text righttext" id="designing">
+						<h1>Visual identity</h1>
+						<h2>because data visualisation has visual in it</h2>
+
+						<p>	
+							We had the content, but no idea of how to represent it. So we started focusing on the visual part of our work. We made a lot of diferent versions before we were happy.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="plaintext staticdynamic ">
+				<div class="fullscreen">
+					<div class="text noshadow">
+						<h1>Static side of the...</h1>
+						<h2>because websites are not the only way</h2>
+
+						<p>
+							First thing we designed was the poster, it seemed to be the most logical order. By creating the poster we we're as well thinking about how we were going to be able to generate it with code. Whit this in the back of our heads we created an intricate graph, that we new could be generated on the website.
+							We chose blue for the digital aspect of todays music storage. As well the background is dark, so the graph will realy pop out and be right in the face.
+						</p>					
+					</div>
+
+					<div class="text noshadow">
+						<img src="_images/dataviz_5.jpg">
+					</div>
+
+					<div class="text noshadow">
+						<h1>Dynamic side of the...</h1>
+						<h2>coding with a new library, INTERESTING !</h2>
+
+						<p>
+							Since we already designed the graph on our poster, the logical thing to do next was to code it into a website. We used « d3.js », it was a steap learning curve, but we did it. Finaly we added two more simple graphs, because we still had two more corelations we found in the databass. The website is based on the same colors as the poster but the background has turned in a more flashy and bright blue.
+						</p>
+					</div>
+
+					<div class="text noshadow">
+						<img src="_images/dataviz_6.jpg">
+					</div>
+				</div>
+			</section>
+
+			<section class="link">
+				<div class="center">
+					<img src="_images/link.svg">
+					<p>take a tour on the website</p>
+				</div>
+			</section>
+
+			<section class="contribution" id="experience">
+				<div class="fullscreen">
+					<div class="text noshadow">
+						<h1>MY CONTRIBUTION</h1>
+						<h2>a little more data ?</h2>				
+					</div>
+
+					<div class="legend">
+						<div><img src="_images/time.svg"><p>time spent during workshop</p></div>
+						<div><p>50%</p></div>
+					</div>
+
+					<div class="fullgraph">
+
+						<div class="rightpart"><div class="graphitem full"><p>30%</p></div><div class="full graphitem"><p>40%</p></div><div class="full graphitem"><p>5%</p></div><div class="full graphitem"><p>10%</p></div><div class="full graphitem"><p>15%</p></div></div>
+
+						<div class="leftpart">
+							
+							<div class="text noshadow">
+								<h2>data fetching</h2>
+
+								<p>
+									I helped searching for a viable database. When we found it, it was so big we had to sort the data and transfer only what we needed of the database, that was my job.
+									
+								</p>
+							</div>
+
+							<div class="text noshadow">
+								<h2>data matching</h2>
+
+								<p>
+									When we got all the data we wanted into a clean spreadcheat, I started playing with the data. Looking for interesting things to compare, like the evolution of music styles during the years.
+									
+								</p>
+							</div>
+
+							<div class="text noshadow">
+								<h2>poster designing</h2>
+
+								<p>
+									When I finished matching up data, 2 persons started designing the poster and the other one studying d3.js.  At first I helped for the poster, I gave my opinion and created a prototype myself.
+									
+								</p>
+							</div>
+
+							<div class="text noshadow">
+								<h2>website designing</h2>
+
+								<p>
+									After the poster, I got into the website part. I designed and coded a little idea I had for the website but it would turn out to complicated to implement d3.js in it.
+									
+								</p>
+							</div>
+
+							<div class="text noshadow">
+								<h2>multidisciplinary</h2>
+
+								<p>
+									Finally I helped a bit on the poster and a bit on the website. I helped for the color choices of the poster and I created the credits page of the website.
+									
+								</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="experiencedataviz">
+				<div class="fullscreen textbottom">
 
 					<div class="threehundred"></div>
 
 					<div class="text righttext">
 
-						<div>
-							<a href=""><img src="_images/linkedin.svg"></a>
-							<a href=""><img src="_images/twitter.svg"></a>
-							<a href=""><img src="_images/pinterest.svg"></a>
-							<a href=""><img src="_images/soundcloud.svg"></a>
-							<a href=""><img src="_images/youtube.svg"></a>
-						</div>
-
-						<h1>in search for experience</h1>
-						<h2>ready for an internship</h2>
+						<h1>a great experience</h1>
+						<h2>bit slow at the start but realy educational</h2>
 
 						<p>	
-							I'm searching for an internship for 2 and half months, this internship will help me gain experience in a real business environment. I hope to be a part of your team soon.
+							This workshop realy let me do what I like, meaning the different aspects of web: Designing, developing, experimenting, searching and coming together with people. As every workshop I did during this year, I learned something new and had a real good time practicing my web skills.
 						</p>
 
-						<button>take me in your team</button>
 					</div>
 				</div>
 			</section>
@@ -207,8 +317,11 @@
 
 		</main>
 
+		<footer></footer>
+
 		<button class="floating">space for a student ?</button>
 		
+		<script src="_js/dataviz.js"></script>
 		<script src="_js/main.js"></script>
 	</body>
 </html>

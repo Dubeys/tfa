@@ -6,6 +6,7 @@ $text_color: #572539
 $text_color2: white
 
 $dataviz_1: #071F1F
+$dataviz_2: #E57245
 
 =transform($option)
 	-webkit-transform: $option
@@ -662,6 +663,19 @@ section.plaintext.fourcorrel
 		div.text:nth-child(1), div.text:nth-child(2)
 			margin-bottom: 50px
 
+section.plaintext.staticdynamic
+	div.fullscreen
+		div.text
+			img
+				width: 80%
+				opacity: 1
+				box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+		div.text:nth-child(3)
+			float: left
+
+		div.text:nth-child(1)
+			float: right
+
 section
 	div.fullscreen
 		div.text.noshadow
@@ -690,6 +704,176 @@ section.goodnessdataviz
 		div.text
 			h1
 				color: $dataviz_1
+
+section.identitydataviz
+	background: url(../_images/back_dataviz_4.jpg) center center
+	background-size: cover
+
+	div.fullscreen
+		div.text
+			h1
+				color: $dataviz_1
+
+section.link
+	background: url(../_images/back_dataviz_5.jpg) center center
+	background-size: cover
+	height: 200px
+	div
+		height: 200px
+		width: 100%
+		margin: 0
+		padding-top: 25px
+
+
+		img
+			display: block
+			width: 40px
+			height: 40px
+			margin: 30px auto 25px auto 
+		p
+			margin: 0
+			line-height: 180%
+			font-size: 10pt
+			font-weight: 800
+			letter-spacing: .1em
+			text-align: center
+			text-transform: uppercase
+			+transition(.2s, ease-in, 0s)
+			color: $text_color2
+			opacity: .8
+
+	div:hover
+		cursor: pointer
+		p
+			letter-spacing: .15em
+			+transition(.2s, ease-in, 0s)
+
+section.contribution
+	background: $text_color2
+	padding-top: 50px
+	div.fullscreen
+		position: relative
+		p
+			margin: 0
+			line-height: 180%
+			font-size: 10pt
+			font-weight: 600
+			color: #333333
+		div.text.noshadow
+			margin: 0
+			box-shadow: none
+			h1
+				color: $dataviz_1
+			h2
+				margin-bottom: 75px
+
+		div.legend
+			width: 50%
+			position: absolute
+			right: 0
+			top: 110px
+			opacity: .4
+			div:first-child
+				width: 70%
+				float: left
+				img
+					width: 20px
+				p
+					font-weight: 600
+					letter-spacing: .1em
+			div:last-child
+				width: 30%
+				float: right
+				p
+					text-align: right
+					font-weight: 600
+					letter-spacing: .1em
+					line-height: 72px
+
+		div.fullgraph
+			width: 100%
+			box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+			height: 1130px
+			margin-bottom: 50px
+			div.leftpart
+				float: left
+				width: 50%
+				height: 100%
+				box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+				z-index: 2
+				div.text.noshadow
+					width: 100%
+					height: 166px
+					h2
+						margin: 0 0 0 10%
+						color: $dataviz_2
+
+			div.rightpart
+				float: right
+				width: 50%
+				height: 100%
+				
+				div.full.graphitem
+					height: 20%
+					background: $dataviz_2
+
+					p
+						width: 100%
+						height: 100%
+						line-height: 226px
+						text-align: center
+						color: $text_color2
+						letter-spacing: .1em
+						opacity: .5
+						+transition(.4s, ease-out, .9s)
+				div.full.graphitem:nth-child(1)
+					width: 60%
+					+transition(.5s, ease-out, 0s)
+				div.full.graphitem:nth-child(2)
+					width: 80%
+					+transition(.5s, ease-out, .2s)
+				div.full.graphitem:nth-child(3)
+					width: 10%
+					+transition(.5s, ease-out, .4s)
+				div.full.graphitem:nth-child(4)
+					width: 20%
+					+transition(.5s, ease-out, .6s)
+				div.full.graphitem:nth-child(5)
+					width: 30%
+					+transition(.5s, ease-out, .8s)
+
+				div.graphitem
+					width: 0%
+					p
+						opacity: 0
+						line-height: 226px
+
+section.experiencedataviz
+	background: url(../_images/back_dataviz_6.jpg) center center
+	background-size: cover
+	box-shadow: 0 0 3px 0 rgba(0,0,0,.5)
+
+	div.fullscreen
+		div.text
+			h1
+				color: $dataviz_1
+
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+//---------------------------------------------------------------------------------------------------FOOTER
+//lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
+
+
+
+footer
+	width: 100%
+	height: 100px
+	background: #333333
 
 
 //lolilolilolilolilolilolilolilolilolilolilolilolilol
@@ -730,7 +914,7 @@ section.goodnessdataviz
 	main section div.fullscreen div.text
 		width: 100%
 
-	main section div.fullscreen.textbottom div.text.righttext
+	main section div.fullscreen div.text.righttext
 		left: 0
 
 	main section.mywork ul li a p.left
@@ -744,6 +928,17 @@ section.goodnessdataviz
 		div.fullscreen
 			div.addtext
 				width: 100%
+
+	section.contribution
+		div.fullscreen
+			div.fullgraph
+				div.leftpart
+					width: 100%
+					height: 100%
+					box-shadow: none
+
+				div.rightpart
+					display: none
 
 @media screen and (max-width: 580px)
 	

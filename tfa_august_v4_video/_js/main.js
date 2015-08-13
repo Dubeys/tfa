@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var backposition_1 = $("#aboutbgrnd").offset().top
+	/*var backposition_1 = $("#aboutbgrnd").offset().top*/
 
 	$(function() {
 		$('a[href*=#]:not([href=#])').click(function() {
