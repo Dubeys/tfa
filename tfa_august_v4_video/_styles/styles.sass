@@ -2,10 +2,10 @@
 //--------------------------------------------------------------------------------------------------SASS
 //lolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilolilol
 
-$text_color: #572539
+$text_color: #262d3a
 $text_color2: white
 
-$dataviz_1: #071F1F
+$dataviz_1: #262d3a
 $dataviz_2: #E57245
 
 =transform($option)
@@ -137,15 +137,14 @@ div.filter
 	+transition(1s, ease-in-out,0s)
 
 header
-	height: 100%
+	height: 500px
 	width: 100%
 	margin-top: 0
 
 	z-index: 0
 
 	div.background
-		background: url(../_images/test_1.jpg)
-		background-position: 50% 50%
+		background: $text_color
 		background-size: cover
 		height: 100%
 		width: 100%
@@ -159,45 +158,55 @@ header
 			max-height: 200%
 			min-width: 100%
 			position: fixed
-			top: 0
+			top: -50%
 			left: 35%
 			+translateX(-35%)
 
 	section.header
 		position: absolute
-		top: 50%
+		top: 100px
+		width: 90%
+		max-width: 1080px
 		left: 50%
 		z-index: -2
 		+translateXaY(-50%,-50%)
-		text-align: center
 
 		h1
-			margin: 0
-			color: $text_color2
-			font-weight: 600
-			letter-spacing: 0em
-			text-shadow: 0 0 10px rgba(0,0,0,.5)
-			font-size: 28pt
-
-			span
-				font-weight: 300
-				color: rgba(255,255,255,.8)
-
-		h2
-			margin: 20px 0px 0px 0px
+			margin: 10px 0px 0px 100px
 			letter-spacing: .1em
 			color: $text_color2
-			font-weight: 600
+			font-weight: 400
 			font-size: 12pt
 			text-shadow: 0 0 10px rgba(0,0,0,.5)
-			text-transform: uppercase
+
+		div
+			height: 75px
+			width: 75px
+			top: 7px
+			box-shadow: 0 0 3px 0 rgba(0,0,0,.3)
+			position: relative
+			overflow: hidden
+			z-index: 5000
+			float: left
+
+			img
+				height: 75px
+				position: relative
+				right: 0px
+				+transition(.3s, ease-in-out, 0s)
+
+header.credits.headerdataviz
+	height: 250px
+
+	div.background
+		background: $text_color
 
 nav
 	width: 90%
 	max-width: 1080px
 	background: $text_color
 	position: absolute
-	bottom: 0
+	top: 400px
 	left: 50%
 	+translateX(-50%)
 	z-index: 0
@@ -310,7 +319,7 @@ main
 	position: relative
 	z-index: 1
 	section
-		background: url(../_images/back_1.jpg) center center
+		background: url(../_images/back_2.jpg) center center
 		background-size: cover
 
 		div.fullscreen
@@ -392,7 +401,7 @@ main
 
 			li:nth-child(4) a div.colorproject
 				right: 0
-				background: #736153
+				background: #e2572d
 
 			li:nth-child(2) a h2, li:nth-child(4) a h2
 				right: 10%
@@ -555,6 +564,10 @@ main
 				background: $text_color
 				color: $text_color2
 
+section#contactme
+	background: url(../_images/back_1.jpg) center center
+	background-size: cover
+
 div.bgrnd
 	position: absolute
 	width: 100%
@@ -565,13 +578,23 @@ div.bgrnd
 
 button.floating
 	position: fixed
-	top: 5%
+	top: 64px
 	background: $text_color2
 	color: $text_color
+	z-index: 200
 	right: 20%
 	opacity: .5
 	+translateX(50%)
 	+transition(.2s, ease-in, 0s)
+
+	a
+		width: 100%
+		height: 100%
+		text-align: center
+		display: block
+		text-decoration: none
+		color: $text_color
+		line-height: 40px
 
 button.floating:hover
 	box-shadow: 1px 1px 5px 0 rgba(0,0,0,.4)
@@ -873,7 +896,66 @@ section.experiencedataviz
 footer
 	width: 100%
 	height: 100px
-	background: #333333
+	background: #2d323a
+	position: relative
+	z-index: 200
+
+	div.ninethy
+		width: 90%
+		max-width: 1080px
+		position: relative
+		left: 50%
+		+translateX(-50%)
+		height: 100%
+
+		div
+			width: 33.3%
+			height: 55px
+			margin-top: 45px
+			float: left
+
+			img
+				float: left
+				width: 40px
+				opacity: .5
+				display: inline-block
+				margin-top: -10px
+
+			p
+				color: $text_color2
+				font-size: 10pt
+				font-weight: 400
+				letter-spacing: 0.1em
+				text-align: center
+				opacity: .5
+				width: 80%
+				margin: 0
+				float: left
+				display: inline-block
+
+			a
+				text-decoration: none
+				color: $text_color2
+				font-size: 10pt
+				font-weight: 400
+				letter-spacing: 0.1em
+				+transition(.2s, ease-in, 0s)
+				width: 50px
+				display: inline-block
+				text-align: center
+				opacity: .5
+				margin-right: 10%
+
+			a:hover
+				letter-spacing: .15em
+				opacity: 1
+				+transition(.3s, ease-out, 0s)
+
+		div:last-child
+			a
+				text-align: right
+				width: 100%
+				display: block
 
 
 //lolilolilolilolilolilolilolilolilolilolilolilolilol
@@ -909,6 +991,9 @@ footer
 		h2
 			color: white
 
+	video
+		display: none
+
 @media screen and (max-width: 720px)
 	
 	main section div.fullscreen div.text
@@ -939,6 +1024,19 @@ footer
 
 				div.rightpart
 					display: none
+
+	footer div.ninethy div img
+		display: none
+
+	nav
+		display: none
+
+	button.floating
+		display: none
+
+	div.legend
+		display: none
+
 
 @media screen and (max-width: 580px)
 	
@@ -977,6 +1075,17 @@ footer
 
 		h2
 			color: #333333
+
+	section#contactme
+		div.fullscreen
+			div.text
+				div
+					a
+						width: 40px
+						height: 40px
+
+						img
+							margin-top: 7px
 
 @media screen and (max-width: 320px)
 	
