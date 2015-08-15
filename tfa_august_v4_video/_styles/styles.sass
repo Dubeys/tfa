@@ -71,28 +71,28 @@ html
 	height: 100%
 
 ::selection 
-	background: #9CF0A1
-	color: $text_color
+	background: #262d3a
+	color: $text_color2
 
 
 ::-webkit-selection 
-	background: #9CF0A1
-	color: $text_color
+	background: #262d3a
+	color: $text_color2
 
 
 ::-moz-selection 
-	background: #9CF0A1
-	color: $text_color
+	background: #262d3a
+	color: $text_color2
 
 
 ::-ms-selection
-	background: #9CF0A1
-	color: $text_color
+	background: #262d3a
+	color: $text_color2
 
 
 ::-o-selection
-	background: #9CF0A1
-	color: $text_color
+	background: #262d3a
+	color: $text_color2
 
 
 body
@@ -881,9 +881,87 @@ section.experiencedataviz
 			h1
 				color: $dataviz_1
 
+section.plaintext.creditspeople
+	div.fullscreen
+		div.text.noshadow
+			ul
+				margin: 50px 0 0 10%
+				padding-bottom: 50px
+				li
+					width: 80% 
+					line-height: 180%
+					font-size: 10pt
+					font-weight: 600
+					color: #333333
 
+					a
+						text-decoration: none
+						color: $text_color
+						font-size: 10pt
+						font-weight: 800
+						letter-spacing: 0.05em
+						+transition(.2s, ease-in, 0s)
+						text-align: center
+
+					a:hover
+						letter-spacing: .1em
+						+transition(.3s, ease-out, 0s)
 
 //lolilolilolilolilolilolilolilolilolilolilolilolilol
+
+main.stupid
+	width: 90%
+	max-width: 1080px
+	height: 300px
+	position: absolute
+	top: 200px
+	left: 50%
+	+translateX(-50%)
+	
+	section
+		width: 50%
+		margin: 0 auto
+		padding-top: 25px
+		background: transparent
+
+		h1
+			margin: 0 0 0 10%
+			text-transform: uppercase
+			font-size: 16pt
+			color: $text_color2
+			letter-spacing: .15em
+			width: 80%
+
+		h2
+			margin: 10px 0 0 10%
+			font-size: 10pt
+			color: $text_color2
+			letter-spacing: .15em
+			font-weight: 600
+			opacity: .8
+			width: 80%
+
+		a
+			text-decoration: none
+			display: block
+			height: 50px
+			width: 80%
+			margin: 0 auto
+			line-height: 50px
+			text-align: center
+			color: $text_color
+			background: $text_color2
+			font-weight: 800
+			letter-spacing: .1em
+			font-size: 10pt
+			border-radius: 5px
+			margin-top: 25px 
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
+
+	img
+		position: absolute
+		height: 20px
+
 
 
 
