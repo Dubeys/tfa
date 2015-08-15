@@ -941,6 +941,14 @@ main.stupid
 			opacity: .8
 			width: 80%
 
+		p
+			margin: 5px 0 0 10%
+			font-size: 10pt
+			color: $text_color2
+			letter-spacing: .1em
+			font-weight: 400
+			opacity: 1
+
 		a
 			text-decoration: none
 			display: block
@@ -958,9 +966,14 @@ main.stupid
 			margin-top: 25px 
 			box-shadow: 0 0 5px 0 rgba(0,0,0,.5)
 
-	img
-		position: absolute
-		height: 20px
+		img
+			margin: 25px 0 0 10%
+			position: static
+			height: 20px
+
+img.cursor
+	position: absolute
+	height: 20px
 
 
 
@@ -1114,6 +1127,10 @@ footer
 
 	div.legend
 		display: none
+
+	main.stupid
+		section
+			width: 100%
 
 
 @media screen and (max-width: 580px)
