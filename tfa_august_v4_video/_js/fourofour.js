@@ -73,7 +73,7 @@ $(document).ready(function(){
 				"display" : "none"
 			})
 
-			$("p").css({
+			$("#thinking").css({
 				"display" : "none"
 			})
 
@@ -86,7 +86,7 @@ $(document).ready(function(){
 				"display" : "block"
 			})
 
-			$("p").css({
+			$("#thinking").css({
 				"display" : "block"
 			})
 
